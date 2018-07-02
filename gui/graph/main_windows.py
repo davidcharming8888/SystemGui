@@ -5,18 +5,21 @@ Module implementing MainWindow.
 """
 
 from PyQt5.QtCore import pyqtSlot, QThread, QTimer, pyqtSignal
-from PyQt5.QtWidgets import QMainWindow
+from PyQt5.QtWidgets import QMainWindow,QMessageBox
 from PyQt5 import QtCore, QtGui, QtWidgets
 from Ui_main_windows import Ui_MainWindow
 
 import pyqtgraph as pg
 from pyqtgraph import PlotItem
+
+import serial
+from select_data import fetch_data_id, fetch_data_updated
 import numpy as np
 import time
 
 from ConnectSensor import Worker
 from DrawGraph import graph
-from select_data import fetch_data_id, fetch_data_updated
+
 
 
 class MainWindow(QMainWindow, Ui_MainWindow):
@@ -81,10 +84,16 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     @pyqtSlot(bool)
     def on_checkBox_showdata_clicked(self, checked):
         """
-        子线程开关，从arduino读取数据
+        子线程开关，检查Arduino和COM口连接，从arduino读取数据
         """
         if checked:
-            self.work.start()
+            try:
+                ser = serial.Serial("COM4", 9600)
+            except:
+                QMessageBox.warning(self, "Sad", "请检查Arduino和COM口连接")
+            else:
+                ser.close()
+                self.work.start()
         elif checked == False:
             self.workbreak.emit()
 
