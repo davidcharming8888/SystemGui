@@ -5,11 +5,11 @@ from select_data import fetch_data_id, fetch_data_updated
 from PyQt5 import QtCore
 
 
-class graph(PlotItem):
+class Graph(PlotItem):
 
     def __init__(self):
 
-        super(graph,self).__init__()
+        super(Graph, self).__init__()
 
         self.setDownsampling(mode ='peak')
         self.setClipToView(True)

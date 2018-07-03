@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'D:\chaos\job\dataflow\gui\graph\main_windows.ui'
+# Form implementation generated from reading ui file 'main_windows.ui'
 #
-# Created by: PyQt5 UI code generator 5.9.2
+# Created by: PyQt5 UI code generator 5.10.1
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(903, 699)
+        MainWindow.resize(863, 699)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.centralwidget)
@@ -86,11 +86,63 @@ class Ui_MainWindow(object):
         self.tabWidget.addTab(self.tab, "")
         self.tab_2 = QtWidgets.QWidget()
         self.tab_2.setObjectName("tab_2")
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.tab_2)
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
+        self.horizontalLayout_5 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_5.setObjectName("horizontalLayout_5")
+        self.prevButton = QtWidgets.QPushButton(self.tab_2)
+        self.prevButton.setObjectName("prevButton")
+        self.horizontalLayout_5.addWidget(self.prevButton)
+        self.nextButton = QtWidgets.QPushButton(self.tab_2)
+        self.nextButton.setObjectName("nextButton")
+        self.horizontalLayout_5.addWidget(self.nextButton)
+        self.label_2 = QtWidgets.QLabel(self.tab_2)
+        self.label_2.setObjectName("label_2")
+        self.horizontalLayout_5.addWidget(self.label_2)
+        self.switchPageLineEdit = QtWidgets.QLineEdit(self.tab_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.switchPageLineEdit.sizePolicy().hasHeightForWidth())
+        self.switchPageLineEdit.setSizePolicy(sizePolicy)
+        self.switchPageLineEdit.setMaximumSize(QtCore.QSize(80, 80))
+        self.switchPageLineEdit.setObjectName("switchPageLineEdit")
+        self.horizontalLayout_5.addWidget(self.switchPageLineEdit)
+        self.label_3 = QtWidgets.QLabel(self.tab_2)
+        self.label_3.setObjectName("label_3")
+        self.horizontalLayout_5.addWidget(self.label_3)
+        self.switchPageButton = QtWidgets.QPushButton(self.tab_2)
+        self.switchPageButton.setObjectName("switchPageButton")
+        self.horizontalLayout_5.addWidget(self.switchPageButton)
+        spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_5.addItem(spacerItem2)
+        self.verticalLayout_3.addLayout(self.horizontalLayout_5)
+        self.tableView = QtWidgets.QTableView(self.tab_2)
+        self.tableView.setObjectName("tableView")
+        self.verticalLayout_3.addWidget(self.tableView)
+        self.horizontalLayout_6 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_6.setObjectName("horizontalLayout_6")
+        self.totalPageLabel = QtWidgets.QLabel(self.tab_2)
+        self.totalPageLabel.setObjectName("totalPageLabel")
+        self.horizontalLayout_6.addWidget(self.totalPageLabel)
+        spacerItem3 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_6.addItem(spacerItem3)
+        self.currentPageLabel = QtWidgets.QLabel(self.tab_2)
+        self.currentPageLabel.setObjectName("currentPageLabel")
+        self.horizontalLayout_6.addWidget(self.currentPageLabel)
+        spacerItem4 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_6.addItem(spacerItem4)
+        self.totalRecordLabel = QtWidgets.QLabel(self.tab_2)
+        self.totalRecordLabel.setObjectName("totalRecordLabel")
+        self.horizontalLayout_6.addWidget(self.totalRecordLabel)
+        self.verticalLayout_3.addLayout(self.horizontalLayout_6)
+        spacerItem5 = QtWidgets.QSpacerItem(20, 263, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_3.addItem(spacerItem5)
         self.tabWidget.addTab(self.tab_2, "")
         self.horizontalLayout_3.addWidget(self.tabWidget)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 903, 26))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 863, 26))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -98,7 +150,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -111,16 +163,14 @@ class Ui_MainWindow(object):
         self.checkBox_2.setText(_translate("MainWindow", "B"))
         self.checkBox_3.setText(_translate("MainWindow", "C"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainWindow", "Tab 1"))
+        self.prevButton.setText(_translate("MainWindow", "前一页"))
+        self.nextButton.setText(_translate("MainWindow", "后一页"))
+        self.label_2.setText(_translate("MainWindow", "转到第"))
+        self.label_3.setText(_translate("MainWindow", "页"))
+        self.switchPageButton.setText(_translate("MainWindow", "查询"))
+        self.totalPageLabel.setText(_translate("MainWindow", "TextLabel"))
+        self.currentPageLabel.setText(_translate("MainWindow", "TextLabel"))
+        self.totalRecordLabel.setText(_translate("MainWindow", "TextLabel"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "Tab 2"))
 
 from pyqtgraph import GraphicsLayoutWidget
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec_())
-
