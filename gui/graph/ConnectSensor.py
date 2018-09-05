@@ -1,7 +1,7 @@
 import pymysql
 import serial
 from PyQt5.QtCore import QThread
-
+import time
 
 class Worker(QThread):
 

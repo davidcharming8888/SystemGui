@@ -5,7 +5,7 @@ Module implementing MainWindow.
 """
 
 from PyQt5.QtCore import pyqtSlot, QThread, QTimer, pyqtSignal, Qt
-from PyQt5.QtWidgets import QMainWindow, QMessageBox
+from PyQt5.QtWidgets import QMainWindow, QMessageBox, QHeaderView,QStyle
 from PyQt5.QtSql import QSqlDatabase, QSqlQueryModel
 from PyQt5 import QtCore, QtGui, QtWidgets
 
@@ -53,6 +53,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.workbreak.connect(self.work.stop)
 
         # 数据库类
+        #表格填满窗口
+        self.tableView.horizontalHeader().setStretchLastSection(True)
+        self.tableView.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
         self.PageRecordCount = 6
         self.setTableView()
 
