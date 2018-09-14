@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_myDialogSignalChange(object):
     def setupUi(self, myDialogSignalChange):
         myDialogSignalChange.setObjectName("myDialogSignalChange")
-        myDialogSignalChange.resize(651, 397)
+        myDialogSignalChange.resize(651, 305)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)

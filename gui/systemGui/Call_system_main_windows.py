@@ -1,10 +1,11 @@
-from PyQt5.QtCore import pyqtSlot, QThread, QTimer, pyqtSignal, Qt
+from PyQt5.QtCore import pyqtSlot, QThread, QTimer, pyqtSignal, QTime ,Qt
 from PyQt5.QtWidgets import QMainWindow, QMessageBox, QHeaderView, QAbstractItemView
 from PyQt5.QtSql import QSqlDatabase, QSqlQueryModel, QSqlQuery
 from PyQt5 import QtCore, QtGui, QtWidgets
 from myFunc.widgetFunc import *
 from myDialog.Ui_myDialogSignalChange import Ui_myDialogSignalChange
 from myDialog.Ui_myDialogSignalAdd import Ui_myDialogSignalAdd
+from myWidget.myQTreeView import Ui_myQTreeViewUnit,Ui_myQTreeViewFault
 import re
 
 from Ui_system_main_windows import Ui_MainWindow
@@ -123,6 +124,83 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                                   )
 
         # T2 风电机组实时监测
+        # 单击图标进入详情页面
+        self.frame_detection.setHidden(True)
+        self.pushButton_unit1.clicked.connect(lambda:self.shiftToDetail(1))
+        self.pushButton_unit2.clicked.connect(lambda:self.shiftToDetail(2))
+        self.pushButton_unit3.clicked.connect(lambda:self.shiftToDetail(3))
+        self.pushButton_unit4.clicked.connect(lambda:self.shiftToDetail(4))
+        self.pushButton_unit5.clicked.connect(lambda:self.shiftToDetail(5))
+        self.pushButton_unit6.clicked.connect(lambda:self.shiftToDetail(6))
+        self.pushButton_unit7.clicked.connect(lambda:self.shiftToDetail(7))
+        self.pushButton_unit8.clicked.connect(lambda:self.shiftToDetail(8))
+        # 返回主页面
+        self.pushButton_backToMainT21.clicked.connect(self.shiftToMain)
+        self.pushButton_backToMainT22.clicked.connect(self.shiftToMain)
+        self.pushButton_backToMainT23.clicked.connect(self.shiftToMain)
+
+        #初始化树形列表
+        self.unit_model = QtGui.QStandardItemModel()
+        Ui_myQTreeViewUnit(self.treeView_unit,self.unit_model)
+        # 设置当前时间
+        self.timerT2 = QTimer(self)
+        self.timerT2.timeout.connect(self.currentTime)
+        self.timerT2.start(1000)
+        # 属性列表单击函数
+        self.treeView_unit.clicked.connect(self.funcT2)
+
+
+
+
+
+        # T3 机组诊断与维修决策
+        self.sqlModel_diagnosis = QSqlQueryModel(self)
+        self.setTableView(tableView=self.tableView_diagnosis,
+                          sqlModel=self.sqlModel_diagnosis,
+                          Query="SELECT 流水号,机组ID,故障模式,故障位置,发生时间,严重等级,发展程度,维修建议,结果 FROM t_diagnosis",
+                          Header=['流水号','机组ID','故障模式','故障位置','发生时间','严重等级','发展程度','维修建议','结果'],
+                          clicked_func=self.funcDiagnosisT3()
+                          )
+
+        # T4
+        # 建立多级树
+        Ui_myQTreeViewFault(self.treeView_fault)
+        self.treeView_fault.clicked.connect(self.funcT4)
+
+        # 设置征兆规则表格T41
+        self.sqlModel_warningrule = QSqlQueryModel(self)
+        self.setTableView(tableView=self.tableView_warningrule,
+                          sqlModel=self.sqlModel_warningrule,
+                          Query="SELECT 预警征兆,运算关系,阈值,逻辑关系 FROM t_warningrule",
+                          Header=['预警征兆','运算关系','阈值','逻辑关系'],
+                          clicked_func=None
+                          )
+
+        self.sqlModel_diagnosisrule = QSqlQueryModel(self)
+        self.setTableView(tableView=self.tableView_diagnosisrule,
+                          sqlModel=self.sqlModel_diagnosisrule,
+                          Query="SELECT 预警征兆,运算关系,阈值,逻辑关系 FROM t_diagnosisrule",
+                          Header=['预警征兆', '运算关系', '阈值', '逻辑关系'],
+                          clicked_func=None
+                          )
+
+        # 设置故障原因和措施表格T42
+        self.sqlModel_faultcause = QSqlQueryModel(self)
+        self.setTableView(tableView=self.tableView_faultcause,
+                          sqlModel=self.sqlModel_faultcause,
+                          Query="SELECT 故障原因, 概率重要度, 维修措施, 主要工具, 备注 FROM t_faultcause",
+                          Header=['故障原因', '概率重要度', '维修措施', '主要工具','备注'],
+                          clicked_func=None
+                          )
+
+        # 设置故障影响表格T43
+        self.sqlModel_faultimpact = QSqlQueryModel(self)
+        self.setTableView(tableView=self.tableView_faultimpact,
+                          sqlModel=self.sqlModel_faultimpact,
+                          Query="SELECT 本级影响, 下级影响, 上级影响, 故障评述, 评价等级, 失效概率 FROM t_faultimpact",
+                          Header=['本级影响', '下级影响', '上级影响', '故障评述', '评价等级', '失效概率'],
+                          clicked_func=None
+                          )
 
 
     # 设置数据库的连接方式
@@ -317,7 +395,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                        ui.LineEdit_signalType,
                        ui.LineEdit_multiple]
 
-        # 确认修改数据后录入数据库 (数据库可以实现，ide里不行？？？)
+        # 确认修改数据后录入数据库
         if myDialogSignalAdd.exec_():
             a = [getEditText(i) for i in nameListT14]
             b = f"insert into t_signal (ID,通道ID,通道名称,是否使用,通道编码,信号类型,放大倍数,所属机组,所属一级系统,所属设备)" \
@@ -363,38 +441,66 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 f"where 通道名称 = '{channelName}'"
             query.exec_(b)
 
-    def test():
-        print("666")
-
-
-        myDialogSignalChange.exec_()
-
-
-    def hi(self):
-        print("6")
-
-
-
-
-
-
-
 
     # Tab15
     def funcT15(self):
-        print("Tab15???")
-
-
-
-
-    @pyqtSlot()
-    def on_unitLogo_pushButton_saveT11_clicked(self):
         pass
 
-    @pyqtSlot()
-    def on_unitLogo_1_clicked(self):
-        self.scrollArea.setHidden(True)
-        self.unitDetalFrame.setHidden(False)
+    # Tab2
+    # 主界面切换到详情界面
+    def shiftToDetail(self,n):
+        self.scrollArea_detection.setHidden(True)
+        self.frame_detection.setHidden(False)
+        self.treeView_unit.collapseAll()
+        # 展开选择的机组项目
+        a = self.unit_model.index(n-1, 0)
+        self.treeView_unit.setExpanded(a, True)
+        # 展示选择的机组检测图
+
+    def shiftToMain(self):
+        self.scrollArea_detection.setHidden(False)
+        self.frame_detection.setHidden(True)
+
+    # 显示实时时间
+    def currentTime(self):
+        a = QTime.currentTime()
+        self.LineEdit_currentTimeT2.setText(a.toString())
+
+    # 多级树点击函数
+    def funcT2(self,index):
+        re_unit = re.compile(r'^(\d+)')
+        result_unit = re_unit.match(index.data())
+
+        # 当点击系统时
+        if result_unit == None:
+            # 显示当前机组
+            self.LineEdit_systemT2.setText(index.data())
+            self.LineEdit_unitT2.setText(index.parent().data())
+            # 主检测图，波形图，趋势图跟随index变化
+
+        # 当点击机组时
+        else:
+            self.LineEdit_systemT2.setText('')
+            self.LineEdit_unitT2.setText('')
+
+        self.treeView_unit.setExpanded(index,True)
+
+        print(self.unit_model.index(1,0).data())
+        print(self.unit_model.index(1,0,self.unit_model.index(1,0)).data())
+
+    #Tab3
+    def funcDiagnosisT3(self):
+        pass
+
+    #Tab4
+    #多级树点击函数
+    def funcT4(self,index):
+        if index.data().startswith("故障"):
+            self.LineEdit_systemT4.setText(index.parent().data())
+            self.LineEdit_faultT4.setText(index.data())
+        else:
+            self.LineEdit_systemT4.setText('')
+            self.LineEdit_faultT4.setText('')
 
     # 重载closeEvent函数，关闭数据库
     def closeEvent(self, *args, **kwargs):
