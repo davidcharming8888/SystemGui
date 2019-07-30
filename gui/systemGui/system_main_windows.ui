@@ -6,21 +6,30 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1222</width>
-    <height>764</height>
+    <width>1444</width>
+    <height>893</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QVBoxLayout" name="verticalLayout_2">
-    <item>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
        <widget class="QLabel" name="mainLogo">
         <property name="sizePolicy">
-         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+         <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
@@ -44,13 +53,49 @@
          </size>
         </property>
         <property name="contextMenuPolicy">
-         <enum>Qt::ActionsContextMenu</enum>
+         <enum>Qt::NoContextMenu</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">.QLabel{
+background-image:url(:/pic/风力发电.png);
+background-repeat: no-repeat; 
+background-position: center;}
+
+</string>
         </property>
         <property name="text">
          <string/>
         </property>
-        <property name="pixmap">
-         <pixmap resource="picSource.qrc">:/pic/风力发电.png</pixmap>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>1052</width>
+          <height>122</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>1052</width>
+          <height>110</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">.QFrame{border-image:url(:/pic/标题1.png)}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
         </property>
        </widget>
       </item>
@@ -75,14 +120,41 @@
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>100</height>
+         </size>
+        </property>
         <property name="maximumSize">
          <size>
           <width>100</width>
           <height>100</height>
          </size>
         </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+background-image:url(:/pic/按钮_知识库.png);
+background-repeat: no-repeat; 
+background-position: center;
+
+font-weight: bold;
+color:rgb(0, 82, 141);
+font-size: 13px
+
+}
+</string>
+        </property>
         <property name="text">
-         <string>知识库</string>
+         <string>
+
+
+
+
+知识库</string>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
         </property>
         <property name="autoDefault">
          <bool>false</bool>
@@ -90,12 +162,18 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_2">
+       <widget class="QPushButton" name="pushButton_log">
         <property name="sizePolicy">
-         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>100</height>
+         </size>
         </property>
         <property name="maximumSize">
          <size>
@@ -103,17 +181,38 @@
           <height>100</height>
          </size>
         </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+background-image:url(:/pic/按钮_登入.png);
+background-repeat: no-repeat; 
+background-position: center;
+background-size:60%;
+color:rgb(0, 82, 141);
+font-size: 13px;
+font-weight: bold;
+}
+
+</string>
+        </property>
         <property name="text">
-         <string>系统登入</string>
+         <string>
+
+
+
+
+系统登入</string>
         </property>
        </widget>
       </item>
      </layout>
     </item>
-    <item>
+    <item row="1" column="0">
      <widget class="QTabWidget" name="tabWidget">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>4</number>
       </property>
       <widget class="QWidget" name="tab1">
        <attribute name="title">
@@ -128,8 +227,11 @@
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
           <property name="currentIndex">
-           <number>0</number>
+           <number>2</number>
           </property>
           <widget class="QWidget" name="tab1_6">
            <attribute name="title">
@@ -659,24 +761,14 @@
            </layout>
           </widget>
           <widget class="QWidget" name="tab1_3">
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
            <attribute name="title">
             <string>设备信息</string>
            </attribute>
            <layout class="QGridLayout" name="gridLayout_11">
-            <item row="0" column="0">
-             <widget class="QLabel" name="label_29">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="text">
-               <string>机组：</string>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="1">
+            <item row="0" column="2">
              <widget class="QComboBox" name="comboBox_unitT13">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
@@ -692,7 +784,33 @@
               </property>
              </widget>
             </item>
-            <item row="0" column="2">
+            <item row="0" column="5">
+             <spacer name="horizontalSpacer_6">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>572</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_29">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>机组：</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="3">
              <widget class="QLabel" name="label_30">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
@@ -705,7 +823,7 @@
               </property>
              </widget>
             </item>
-            <item row="0" column="3">
+            <item row="0" column="4">
              <widget class="QComboBox" name="comboBox_systemT13">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
@@ -721,31 +839,758 @@
               </property>
              </widget>
             </item>
-            <item row="0" column="4">
-             <spacer name="horizontalSpacer_6">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
+            <item row="1" column="0" colspan="6">
+             <widget class="QFrame" name="frame_test">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
               </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>572</width>
-                <height>20</height>
-               </size>
+              <property name="styleSheet">
+               <string notr="true"/>
               </property>
-             </spacer>
-            </item>
-            <item row="1" column="0">
-             <spacer name="verticalSpacer_15">
-              <property name="orientation">
-               <enum>Qt::Vertical</enum>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
               </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>20</width>
-                <height>402</height>
-               </size>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
               </property>
-             </spacer>
+              <layout class="QVBoxLayout" name="verticalLayout_12">
+               <item>
+                <widget class="QScrollArea" name="scrollArea">
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
+                 <property name="widgetResizable">
+                  <bool>true</bool>
+                 </property>
+                 <widget class="QWidget" name="test_scroll">
+                  <property name="geometry">
+                   <rect>
+                    <x>0</x>
+                    <y>0</y>
+                    <width>1722</width>
+                    <height>674</height>
+                   </rect>
+                  </property>
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true"/>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_13">
+                   <item>
+                    <widget class="QFrame" name="frame_4">
+                     <property name="enabled">
+                      <bool>true</bool>
+                     </property>
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>1700</width>
+                       <height>652</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>1700</width>
+                       <height>652</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">.QFrame{border-image:url(:/pic/设备树.png)}</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <widget class="QPushButton" name="pushButton_facility_1">
+                      <property name="geometry">
+                       <rect>
+                        <x>210</x>
+                        <y>80</y>
+                        <width>111</width>
+                        <height>41</height>
+                       </rect>
+                      </property>
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background: transparent;
+</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                     <widget class="QPushButton" name="pushButton_facility_2">
+                      <property name="geometry">
+                       <rect>
+                        <x>73</x>
+                        <y>150</y>
+                        <width>81</width>
+                        <height>31</height>
+                       </rect>
+                      </property>
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background: transparent;
+</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                     <widget class="QPushButton" name="pushButton_facility_3">
+                      <property name="geometry">
+                       <rect>
+                        <x>10</x>
+                        <y>200</y>
+                        <width>101</width>
+                        <height>41</height>
+                       </rect>
+                      </property>
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background: transparent;
+</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                     <widget class="QPushButton" name="pushButton_facility_4">
+                      <property name="geometry">
+                       <rect>
+                        <x>123</x>
+                        <y>200</y>
+                        <width>101</width>
+                        <height>41</height>
+                       </rect>
+                      </property>
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background: transparent;
+</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                     <widget class="QPushButton" name="pushButton_facility_5">
+                      <property name="geometry">
+                       <rect>
+                        <x>0</x>
+                        <y>260</y>
+                        <width>31</width>
+                        <height>161</height>
+                       </rect>
+                      </property>
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background: transparent;
+</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                     <widget class="QPushButton" name="pushButton_facility_6">
+                      <property name="geometry">
+                       <rect>
+                        <x>30</x>
+                        <y>260</y>
+                        <width>31</width>
+                        <height>161</height>
+                       </rect>
+                      </property>
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background: transparent;
+</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                     <widget class="QPushButton" name="pushButton_facility_7">
+                      <property name="geometry">
+                       <rect>
+                        <x>60</x>
+                        <y>260</y>
+                        <width>31</width>
+                        <height>161</height>
+                       </rect>
+                      </property>
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background: transparent;
+</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                     <widget class="QPushButton" name="pushButton_facility_8">
+                      <property name="geometry">
+                       <rect>
+                        <x>100</x>
+                        <y>260</y>
+                        <width>31</width>
+                        <height>161</height>
+                       </rect>
+                      </property>
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background: transparent;
+</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                     <widget class="QPushButton" name="pushButton_facility_9">
+                      <property name="geometry">
+                       <rect>
+                        <x>130</x>
+                        <y>260</y>
+                        <width>31</width>
+                        <height>161</height>
+                       </rect>
+                      </property>
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background: transparent;
+</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                     <widget class="QPushButton" name="pushButton_facility_10">
+                      <property name="geometry">
+                       <rect>
+                        <x>160</x>
+                        <y>260</y>
+                        <width>31</width>
+                        <height>161</height>
+                       </rect>
+                      </property>
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background: transparent;
+</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                     <widget class="QPushButton" name="pushButton_facility_11">
+                      <property name="geometry">
+                       <rect>
+                        <x>190</x>
+                        <y>260</y>
+                        <width>31</width>
+                        <height>161</height>
+                       </rect>
+                      </property>
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background: transparent;
+</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                     <widget class="QPushButton" name="pushButton_facility_12">
+                      <property name="geometry">
+                       <rect>
+                        <x>380</x>
+                        <y>150</y>
+                        <width>81</width>
+                        <height>31</height>
+                       </rect>
+                      </property>
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background: transparent;
+</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                     <widget class="QPushButton" name="pushButton_facility_13">
+                      <property name="geometry">
+                       <rect>
+                        <x>240</x>
+                        <y>200</y>
+                        <width>81</width>
+                        <height>41</height>
+                       </rect>
+                      </property>
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background: transparent;
+</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                     <widget class="QPushButton" name="pushButton_facility_14">
+                      <property name="geometry">
+                       <rect>
+                        <x>250</x>
+                        <y>260</y>
+                        <width>31</width>
+                        <height>161</height>
+                       </rect>
+                      </property>
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background: transparent;
+</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                     <widget class="QPushButton" name="pushButton_facility_15">
+                      <property name="geometry">
+                       <rect>
+                        <x>280</x>
+                        <y>260</y>
+                        <width>31</width>
+                        <height>161</height>
+                       </rect>
+                      </property>
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background: transparent;
+</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                     <widget class="QPushButton" name="pushButton_facility_16">
+                      <property name="geometry">
+                       <rect>
+                        <x>380</x>
+                        <y>200</y>
+                        <width>81</width>
+                        <height>41</height>
+                       </rect>
+                      </property>
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background: transparent;
+</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                     <widget class="QPushButton" name="pushButton_facility_17">
+                      <property name="geometry">
+                       <rect>
+                        <x>330</x>
+                        <y>260</y>
+                        <width>21</width>
+                        <height>161</height>
+                       </rect>
+                      </property>
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background: transparent;
+</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                     <widget class="QPushButton" name="pushButton_facility_18">
+                      <property name="geometry">
+                       <rect>
+                        <x>360</x>
+                        <y>260</y>
+                        <width>21</width>
+                        <height>161</height>
+                       </rect>
+                      </property>
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background: transparent;
+</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                     <widget class="QPushButton" name="pushButton_facility_19">
+                      <property name="geometry">
+                       <rect>
+                        <x>390</x>
+                        <y>260</y>
+                        <width>31</width>
+                        <height>161</height>
+                       </rect>
+                      </property>
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background: transparent;
+</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                     <widget class="QPushButton" name="pushButton_facility_20">
+                      <property name="geometry">
+                       <rect>
+                        <x>420</x>
+                        <y>260</y>
+                        <width>31</width>
+                        <height>161</height>
+                       </rect>
+                      </property>
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background: transparent;
+</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                     <widget class="QPushButton" name="pushButton_facility_21">
+                      <property name="geometry">
+                       <rect>
+                        <x>460</x>
+                        <y>260</y>
+                        <width>31</width>
+                        <height>161</height>
+                       </rect>
+                      </property>
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background: transparent;
+</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                     <widget class="QPushButton" name="pushButton_facility_22">
+                      <property name="geometry">
+                       <rect>
+                        <x>490</x>
+                        <y>260</y>
+                        <width>31</width>
+                        <height>161</height>
+                       </rect>
+                      </property>
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background: transparent;
+</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                     <widget class="QPushButton" name="pushButton_facility_23">
+                      <property name="geometry">
+                       <rect>
+                        <x>570</x>
+                        <y>200</y>
+                        <width>81</width>
+                        <height>41</height>
+                       </rect>
+                      </property>
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background: transparent;
+</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                     <widget class="QPushButton" name="pushButton_facility_24">
+                      <property name="geometry">
+                       <rect>
+                        <x>550</x>
+                        <y>260</y>
+                        <width>21</width>
+                        <height>161</height>
+                       </rect>
+                      </property>
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background: transparent;
+</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                     <widget class="QPushButton" name="pushButton_facility_25">
+                      <property name="geometry">
+                       <rect>
+                        <x>580</x>
+                        <y>260</y>
+                        <width>21</width>
+                        <height>161</height>
+                       </rect>
+                      </property>
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background: transparent;
+</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                     <widget class="QPushButton" name="pushButton_facility_26">
+                      <property name="geometry">
+                       <rect>
+                        <x>610</x>
+                        <y>260</y>
+                        <width>31</width>
+                        <height>161</height>
+                       </rect>
+                      </property>
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background: transparent;
+</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                     <widget class="QPushButton" name="pushButton_facility_27">
+                      <property name="geometry">
+                       <rect>
+                        <x>640</x>
+                        <y>260</y>
+                        <width>31</width>
+                        <height>161</height>
+                       </rect>
+                      </property>
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background: transparent;
+</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                     <widget class="QPushButton" name="pushButton_facility_28">
+                      <property name="geometry">
+                       <rect>
+                        <x>260</x>
+                        <y>490</y>
+                        <width>31</width>
+                        <height>161</height>
+                       </rect>
+                      </property>
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background: transparent;
+</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                     <widget class="QPushButton" name="pushButton_facility_29">
+                      <property name="geometry">
+                       <rect>
+                        <x>300</x>
+                        <y>490</y>
+                        <width>31</width>
+                        <height>161</height>
+                       </rect>
+                      </property>
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background: transparent;
+</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </widget>
+               </item>
+              </layout>
+             </widget>
             </item>
            </layout>
           </widget>
@@ -863,7 +1708,11 @@
              </spacer>
             </item>
             <item row="1" column="0" colspan="9">
-             <widget class="QTableView" name="tableView_signal"/>
+             <widget class="QTableView" name="tableView_signal">
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+             </widget>
             </item>
            </layout>
           </widget>
@@ -1015,7 +1864,7 @@
       </widget>
       <widget class="QWidget" name="tab2">
        <attribute name="title">
-        <string>风电机组实时监测</string>
+        <string>机组实时监测</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_4">
         <item>
@@ -1024,7 +1873,7 @@
            <bool>true</bool>
           </property>
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -1046,7 +1895,7 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1149</width>
+             <width>1371</width>
              <height>591</height>
             </rect>
            </property>
@@ -2357,7 +3206,7 @@
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                  <horstretch>1</horstretch>
-                 <verstretch>2</verstretch>
+                 <verstretch>5</verstretch>
                 </sizepolicy>
                </property>
               </widget>
@@ -2381,7 +3230,7 @@
                 <widget class="QLineEdit" name="LineEdit_currentTimeT2">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                   <horstretch>0</horstretch>
+                   <horstretch>1</horstretch>
                    <verstretch>0</verstretch>
                   </sizepolicy>
                  </property>
@@ -2404,7 +3253,7 @@
                 <widget class="QLineEdit" name="LineEdit_unitT2">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                   <horstretch>0</horstretch>
+                   <horstretch>1</horstretch>
                    <verstretch>0</verstretch>
                   </sizepolicy>
                  </property>
@@ -2427,7 +3276,7 @@
                 <widget class="QLineEdit" name="LineEdit_systemT2">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                   <horstretch>0</horstretch>
+                   <horstretch>1</horstretch>
                    <verstretch>0</verstretch>
                   </sizepolicy>
                  </property>
@@ -2449,6 +3298,9 @@
                  <verstretch>0</verstretch>
                 </sizepolicy>
                </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
                <property name="currentIndex">
                 <number>0</number>
                </property>
@@ -2458,180 +3310,2236 @@
                 </attribute>
                 <layout class="QVBoxLayout" name="verticalLayout_8">
                  <item>
-                  <spacer name="verticalSpacer_21">
-                   <property name="orientation">
-                    <enum>Qt::Vertical</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>20</width>
-                     <height>607</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
-                 <item>
-                  <layout class="QHBoxLayout" name="horizontalLayout_8">
+                  <layout class="QVBoxLayout" name="verticalLayout_2">
                    <item>
-                    <spacer name="horizontalSpacer_16">
-                     <property name="orientation">
-                      <enum>Qt::Horizontal</enum>
+                    <widget class="QScrollArea" name="scrollArea_T21">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
                      </property>
-                     <property name="sizeHint" stdset="0">
+                     <property name="maximumSize">
                       <size>
-                       <width>778</width>
-                       <height>20</height>
+                       <width>2000</width>
+                       <height>600</height>
                       </size>
                      </property>
-                    </spacer>
+                     <property name="accessibleDescription">
+                      <string/>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">.QWidget{background-color:rgb(0,112,192, 50)}
+QPushButton{background: transparent;}</string>
+                     </property>
+                     <property name="midLineWidth">
+                      <number>1</number>
+                     </property>
+                     <property name="widgetResizable">
+                      <bool>true</bool>
+                     </property>
+                     <widget class="QWidget" name="scrollAreaWidgetContents_2">
+                      <property name="geometry">
+                       <rect>
+                        <x>0</x>
+                        <y>0</y>
+                        <width>1074</width>
+                        <height>609</height>
+                       </rect>
+                      </property>
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true"/>
+                      </property>
+                      <layout class="QVBoxLayout" name="verticalLayout_18">
+                       <item>
+                        <widget class="QWidget" name="widget_7" native="true">
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
+                         </property>
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>580</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>2000</width>
+                           <height>580</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true"/>
+                         </property>
+                         <layout class="QHBoxLayout" name="horizontalLayout_15">
+                          <property name="leftMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="topMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="rightMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="bottomMargin">
+                           <number>0</number>
+                          </property>
+                          <item>
+                           <widget class="QFrame" name="frame_5">
+                            <property name="sizePolicy">
+                             <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                              <horstretch>8</horstretch>
+                              <verstretch>0</verstretch>
+                             </sizepolicy>
+                            </property>
+                            <property name="minimumSize">
+                             <size>
+                              <width>1043</width>
+                              <height>580</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>1043</width>
+                              <height>580</height>
+                             </size>
+                            </property>
+                            <property name="layoutDirection">
+                             <enum>Qt::LeftToRight</enum>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">.QFrame{border-image:url(:/pic/系统测点图.png)}
+
+</string>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <widget class="QLineEdit" name="lineEditWindPowerT21_1">
+                             <property name="geometry">
+                              <rect>
+                               <x>0</x>
+                               <y>150</y>
+                               <width>51</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>0</string>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="lineEditWindPowerT21_2">
+                             <property name="geometry">
+                              <rect>
+                               <x>30</x>
+                               <y>177</y>
+                               <width>51</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>27.5</string>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="lineEditWindPowerT21_3">
+                             <property name="geometry">
+                              <rect>
+                               <x>30</x>
+                               <y>202</y>
+                               <width>51</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>5.22</string>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="lineEditWindPowerT21_4">
+                             <property name="geometry">
+                              <rect>
+                               <x>0</x>
+                               <y>230</y>
+                               <width>51</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>13.1</string>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="lineEditWindPowerT21_5">
+                             <property name="geometry">
+                              <rect>
+                               <x>0</x>
+                               <y>260</y>
+                               <width>51</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>27.9</string>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="lineEditWindPowerT21_6">
+                             <property name="geometry">
+                              <rect>
+                               <x>30</x>
+                               <y>290</y>
+                               <width>51</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>5.94</string>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="lineEditWindPowerT21_7">
+                             <property name="geometry">
+                              <rect>
+                               <x>0</x>
+                               <y>320</y>
+                               <width>51</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>11.3</string>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="lineEditWindPowerT21_8">
+                             <property name="geometry">
+                              <rect>
+                               <x>0</x>
+                               <y>350</y>
+                               <width>51</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>27.3</string>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="lineEditWindPowerT21_9">
+                             <property name="geometry">
+                              <rect>
+                               <x>40</x>
+                               <y>380</y>
+                               <width>51</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>4.99</string>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="lineEditWindPowerT21_10">
+                             <property name="geometry">
+                              <rect>
+                               <x>0</x>
+                               <y>410</y>
+                               <width>51</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>12.6</string>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="lineEditWindPowerT21_11">
+                             <property name="geometry">
+                              <rect>
+                               <x>0</x>
+                               <y>435</y>
+                               <width>51</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>28.1</string>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="lineEditWindPowerT21_12">
+                             <property name="geometry">
+                              <rect>
+                               <x>870</x>
+                               <y>60</y>
+                               <width>51</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>11.7</string>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="lineEditWindPowerT21_13">
+                             <property name="geometry">
+                              <rect>
+                               <x>870</x>
+                               <y>90</y>
+                               <width>51</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>4</string>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="lineEditWindPowerT21_14">
+                             <property name="geometry">
+                              <rect>
+                               <x>660</x>
+                               <y>500</y>
+                               <width>41</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>0</string>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="lineEditWindPowerT21_15">
+                             <property name="geometry">
+                              <rect>
+                               <x>610</x>
+                               <y>530</y>
+                               <width>41</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>412</string>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="lineEditTransT21_1">
+                             <property name="geometry">
+                              <rect>
+                               <x>140</x>
+                               <y>40</y>
+                               <width>51</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>3.15</string>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="lineEditTransT21_2">
+                             <property name="geometry">
+                              <rect>
+                               <x>250</x>
+                               <y>27</y>
+                               <width>51</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>5.15</string>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="lineEditTransT21_3">
+                             <property name="geometry">
+                              <rect>
+                               <x>342</x>
+                               <y>22</y>
+                               <width>51</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>3.68</string>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="lineEditTransT21_4">
+                             <property name="geometry">
+                              <rect>
+                               <x>415</x>
+                               <y>22</y>
+                               <width>51</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>4.11</string>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="lineEditTransT21_5">
+                             <property name="geometry">
+                              <rect>
+                               <x>518</x>
+                               <y>0</y>
+                               <width>51</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>4.58</string>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="lineEditTransT21_6">
+                             <property name="geometry">
+                              <rect>
+                               <x>624</x>
+                               <y>0</y>
+                               <width>51</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>2.57</string>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="lineEditTransT21_7">
+                             <property name="geometry">
+                              <rect>
+                               <x>90</x>
+                               <y>460</y>
+                               <width>51</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>48000</string>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="lineEditTransT21_8">
+                             <property name="geometry">
+                              <rect>
+                               <x>90</x>
+                               <y>490</y>
+                               <width>51</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>39.3</string>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="lineEditTransT21_9">
+                             <property name="geometry">
+                              <rect>
+                               <x>90</x>
+                               <y>518</y>
+                               <width>51</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>0</string>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="lineEditTransT21_10">
+                             <property name="geometry">
+                              <rect>
+                               <x>610</x>
+                               <y>470</y>
+                               <width>41</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>31</string>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="lineEditGeneratorT21_1">
+                             <property name="geometry">
+                              <rect>
+                               <x>529</x>
+                               <y>85</y>
+                               <width>51</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>2.54</string>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="lineEditGeneratorT21_2">
+                             <property name="geometry">
+                              <rect>
+                               <x>627</x>
+                               <y>85</y>
+                               <width>51</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>1.21</string>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="lineEditGeneratorT21_3">
+                             <property name="geometry">
+                              <rect>
+                               <x>871</x>
+                               <y>123</y>
+                               <width>51</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>705.4</string>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="lineEditGeneratorT21_4">
+                             <property name="geometry">
+                              <rect>
+                               <x>871</x>
+                               <y>150</y>
+                               <width>51</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>700.8</string>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="lineEditGeneratorT21_5">
+                             <property name="geometry">
+                              <rect>
+                               <x>871</x>
+                               <y>177</y>
+                               <width>51</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>706.2</string>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="lineEditGeneratorT21_6">
+                             <property name="geometry">
+                              <rect>
+                               <x>900</x>
+                               <y>199</y>
+                               <width>41</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>1.5</string>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="lineEditGeneratorT21_7">
+                             <property name="geometry">
+                              <rect>
+                               <x>900</x>
+                               <y>224</y>
+                               <width>41</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>1.4</string>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="lineEditGeneratorT21_8">
+                             <property name="geometry">
+                              <rect>
+                               <x>900</x>
+                               <y>251</y>
+                               <width>41</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>1.7</string>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="lineEditGeneratorT21_9">
+                             <property name="geometry">
+                              <rect>
+                               <x>980</x>
+                               <y>288</y>
+                               <width>51</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>1812</string>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="lineEditGeneratorT21_10">
+                             <property name="geometry">
+                              <rect>
+                               <x>980</x>
+                               <y>329</y>
+                               <width>51</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>2.36</string>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="lineEditGeneratorT21_11">
+                             <property name="geometry">
+                              <rect>
+                               <x>720</x>
+                               <y>470</y>
+                               <width>41</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>49</string>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="lineEditGeneratorT21_12">
+                             <property name="geometry">
+                              <rect>
+                               <x>840</x>
+                               <y>470</y>
+                               <width>41</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>52</string>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnWindPowerT21_1">
+                             <property name="geometry">
+                              <rect>
+                               <x>50</x>
+                               <y>150</y>
+                               <width>121</width>
+                               <height>21</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">QPushButton:hover{background-color:rgba(255, 194, 123,100)}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>变桨启停使能信号</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnWindPowerT21_2">
+                             <property name="geometry">
+                              <rect>
+                               <x>90</x>
+                               <y>179</y>
+                               <width>61</width>
+                               <height>21</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">
+QPushButton{background: transparent;}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>环境温度</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnWindPowerT21_3">
+                             <property name="geometry">
+                              <rect>
+                               <x>90</x>
+                               <y>206</y>
+                               <width>71</width>
+                               <height>21</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">
+QPushButton{background: transparent;}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>桨叶角度1</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnWindPowerT21_4">
+                             <property name="geometry">
+                              <rect>
+                               <x>50</x>
+                               <y>232</y>
+                               <width>101</width>
+                               <height>21</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">
+QPushButton{background: transparent;}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>变桨电机转矩1</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnWindPowerT21_5">
+                             <property name="geometry">
+                              <rect>
+                               <x>50</x>
+                               <y>260</y>
+                               <width>101</width>
+                               <height>21</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">
+QPushButton{background: transparent;}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>变桨电机温度1</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnWindPowerT21_6">
+                             <property name="geometry">
+                              <rect>
+                               <x>90</x>
+                               <y>290</y>
+                               <width>71</width>
+                               <height>21</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">
+QPushButton{background: transparent;}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>桨叶角度2</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnWindPowerT21_7">
+                             <property name="geometry">
+                              <rect>
+                               <x>50</x>
+                               <y>322</y>
+                               <width>101</width>
+                               <height>21</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">
+QPushButton{background: transparent;}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>变桨电机转矩2</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnWindPowerT21_8">
+                             <property name="geometry">
+                              <rect>
+                               <x>50</x>
+                               <y>350</y>
+                               <width>101</width>
+                               <height>21</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">
+QPushButton{background: transparent;}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>变桨电机温度2</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnWindPowerT21_9">
+                             <property name="geometry">
+                              <rect>
+                               <x>90</x>
+                               <y>380</y>
+                               <width>71</width>
+                               <height>21</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">
+QPushButton{background: transparent;}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>桨叶角度3</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnWindPowerT21_10">
+                             <property name="geometry">
+                              <rect>
+                               <x>50</x>
+                               <y>410</y>
+                               <width>101</width>
+                               <height>21</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">
+QPushButton{background: transparent;}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>变桨电机转矩3</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnWindPowerT21_11">
+                             <property name="geometry">
+                              <rect>
+                               <x>50</x>
+                               <y>434</y>
+                               <width>101</width>
+                               <height>21</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">
+QPushButton{background: transparent;}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>变桨电机温度3</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnWindPowerT21_12">
+                             <property name="geometry">
+                              <rect>
+                               <x>810</x>
+                               <y>54</y>
+                               <width>41</width>
+                               <height>21</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">
+QPushButton{background: transparent;}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>风速</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnWindPowerT21_13">
+                             <property name="geometry">
+                              <rect>
+                               <x>810</x>
+                               <y>87</y>
+                               <width>41</width>
+                               <height>21</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">
+QPushButton{background: transparent;}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>风向</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnWindPowerT21_14">
+                             <property name="geometry">
+                              <rect>
+                               <x>530</x>
+                               <y>500</y>
+                               <width>121</width>
+                               <height>21</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">
+QPushButton{background: transparent;}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>偏航启停使能信号</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnWindPowerT21_15">
+                             <property name="geometry">
+                              <rect>
+                               <x>530</x>
+                               <y>531</y>
+                               <width>71</width>
+                               <height>21</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">
+QPushButton{background: transparent;}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>机舱位置</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnTransT21_1">
+                             <property name="geometry">
+                              <rect>
+                               <x>140</x>
+                               <y>60</y>
+                               <width>91</width>
+                               <height>21</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">
+QPushButton{background: transparent;}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>主轴轴承振动</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnTransT21_2">
+                             <property name="geometry">
+                              <rect>
+                               <x>251</x>
+                               <y>47</y>
+                               <width>71</width>
+                               <height>41</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">
+QPushButton{background: transparent;}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>一级行星
+轮系振动</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnTransT21_3">
+                             <property name="geometry">
+                              <rect>
+                               <x>345</x>
+                               <y>42</y>
+                               <width>61</width>
+                               <height>41</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">
+QPushButton{background: transparent;}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>二级行星
+轮系振动</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnTransT21_4">
+                             <property name="geometry">
+                              <rect>
+                               <x>414</x>
+                               <y>41</y>
+                               <width>91</width>
+                               <height>41</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">
+QPushButton{background: transparent;}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>输出端低速轮
+径向振动</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnTransT21_5">
+                             <property name="geometry">
+                              <rect>
+                               <x>517</x>
+                               <y>20</y>
+                               <width>91</width>
+                               <height>41</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">
+QPushButton{background: transparent;}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>输出端高速轮
+径向振动</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnTransT21_6">
+                             <property name="geometry">
+                              <rect>
+                               <x>624</x>
+                               <y>20</y>
+                               <width>91</width>
+                               <height>41</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">
+QPushButton{background: transparent;}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>输出端高速轮
+轴向振动</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnTransT21_7">
+                             <property name="geometry">
+                              <rect>
+                               <x>150</x>
+                               <y>460</y>
+                               <width>51</width>
+                               <height>21</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">
+QPushButton{background: transparent;}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>磨粒数</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnTransT21_8">
+                             <property name="geometry">
+                              <rect>
+                               <x>150</x>
+                               <y>490</y>
+                               <width>61</width>
+                               <height>21</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">
+QPushButton{background: transparent;}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>油液温度</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnTransT21_9">
+                             <property name="geometry">
+                              <rect>
+                               <x>150</x>
+                               <y>516</y>
+                               <width>61</width>
+                               <height>41</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">
+QPushButton{background: transparent;}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>油泵启停
+使能信号</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnTransT21_10">
+                             <property name="geometry">
+                              <rect>
+                               <x>530</x>
+                               <y>470</y>
+                               <width>71</width>
+                               <height>21</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">
+QPushButton{background: transparent;}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>机舱温度</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnGeneratorT21_1">
+                             <property name="geometry">
+                              <rect>
+                               <x>528</x>
+                               <y>104</y>
+                               <width>91</width>
+                               <height>41</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">
+QPushButton{background: transparent;}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>发电机上风向
+轴承径向振动</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnGeneratorT21_2">
+                             <property name="geometry">
+                              <rect>
+                               <x>628</x>
+                               <y>104</y>
+                               <width>91</width>
+                               <height>41</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">
+QPushButton{background: transparent;}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>发电机上风向
+轴承径向振动</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnGeneratorT21_3">
+                             <property name="geometry">
+                              <rect>
+                               <x>776</x>
+                               <y>123</y>
+                               <width>91</width>
+                               <height>21</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">
+QPushButton{background: transparent;}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>定子侧电流A</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnGeneratorT21_4">
+                             <property name="geometry">
+                              <rect>
+                               <x>776</x>
+                               <y>150</y>
+                               <width>91</width>
+                               <height>21</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">
+QPushButton{background: transparent;}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>定子侧电流B</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnGeneratorT21_5">
+                             <property name="geometry">
+                              <rect>
+                               <x>776</x>
+                               <y>177</y>
+                               <width>91</width>
+                               <height>21</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">
+QPushButton{background: transparent;}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>定子侧电流C</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnGeneratorT21_6">
+                             <property name="geometry">
+                              <rect>
+                               <x>810</x>
+                               <y>199</y>
+                               <width>91</width>
+                               <height>21</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">
+QPushButton{background: transparent;}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>转子侧电流A</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnGeneratorT21_7">
+                             <property name="geometry">
+                              <rect>
+                               <x>810</x>
+                               <y>224</y>
+                               <width>91</width>
+                               <height>21</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">
+QPushButton{background: transparent;}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>转子侧电流B</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnGeneratorT21_8">
+                             <property name="geometry">
+                              <rect>
+                               <x>810</x>
+                               <y>251</y>
+                               <width>91</width>
+                               <height>21</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">
+QPushButton{background: transparent;}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>转子侧电流C</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnGeneratorT21_9">
+                             <property name="geometry">
+                              <rect>
+                               <x>894</x>
+                               <y>286</y>
+                               <width>81</width>
+                               <height>21</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">
+QPushButton{background: transparent;}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>发电机转速</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnGeneratorT21_10">
+                             <property name="geometry">
+                              <rect>
+                               <x>885</x>
+                               <y>318</y>
+                               <width>91</width>
+                               <height>41</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">
+QPushButton{background: transparent;}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>发电机下风向
+轴承径向振动</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnGeneratorT21_11">
+                             <property name="geometry">
+                              <rect>
+                               <x>654</x>
+                               <y>450</y>
+                               <width>111</width>
+                               <height>21</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">
+QPushButton{background: transparent;}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>发电机定子温度</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnGeneratorT21_12">
+                             <property name="geometry">
+                              <rect>
+                               <x>772</x>
+                               <y>450</y>
+                               <width>111</width>
+                               <height>21</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">
+QPushButton{background: transparent;}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>发电机转子温度</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnGeneratorT21_13">
+                             <property name="geometry">
+                              <rect>
+                               <x>924</x>
+                               <y>123</y>
+                               <width>41</width>
+                               <height>21</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">
+QPushButton{background: transparent;}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>电压A</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnGeneratorT21_14">
+                             <property name="geometry">
+                              <rect>
+                               <x>924</x>
+                               <y>150</y>
+                               <width>41</width>
+                               <height>21</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">
+QPushButton{background: transparent;}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>电压B</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnGeneratorT21_15">
+                             <property name="geometry">
+                              <rect>
+                               <x>924</x>
+                               <y>177</y>
+                               <width>41</width>
+                               <height>21</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">
+QPushButton{background: transparent;}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>电压C</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnGeneratorT21_16">
+                             <property name="geometry">
+                              <rect>
+                               <x>960</x>
+                               <y>199</y>
+                               <width>41</width>
+                               <height>21</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">
+QPushButton{background: transparent;}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>电压A</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnGeneratorT21_17">
+                             <property name="geometry">
+                              <rect>
+                               <x>960</x>
+                               <y>224</y>
+                               <width>41</width>
+                               <height>21</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">
+QPushButton{background: transparent;}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>电压B</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="BtnGeneratorT21_18">
+                             <property name="geometry">
+                              <rect>
+                               <x>960</x>
+                               <y>251</y>
+                               <width>41</width>
+                               <height>21</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">
+QPushButton{background: transparent;}
+QPushButton:hover{background-color:rgb(255, 194, 123)}
+</string>
+                             </property>
+                             <property name="text">
+                              <string>电压C</string>
+                             </property>
+                             <property name="checkable">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoRepeat">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoExclusive">
+                              <bool>false</bool>
+                             </property>
+                             <property name="autoDefault">
+                              <bool>false</bool>
+                             </property>
+                             <property name="flat">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="lineEditGeneratorT21_13">
+                             <property name="geometry">
+                              <rect>
+                               <x>970</x>
+                               <y>123</y>
+                               <width>51</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>679.5</string>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="lineEditGeneratorT21_14">
+                             <property name="geometry">
+                              <rect>
+                               <x>970</x>
+                               <y>150</y>
+                               <width>51</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>674.2</string>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="lineEditGeneratorT21_15">
+                             <property name="geometry">
+                              <rect>
+                               <x>970</x>
+                               <y>177</y>
+                               <width>51</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>669.8</string>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="lineEditGeneratorT21_16">
+                             <property name="geometry">
+                              <rect>
+                               <x>1000</x>
+                               <y>199</y>
+                               <width>41</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>2.6</string>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="lineEditGeneratorT21_17">
+                             <property name="geometry">
+                              <rect>
+                               <x>1000</x>
+                               <y>224</y>
+                               <width>41</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>2.1</string>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="lineEditGeneratorT21_18">
+                             <property name="geometry">
+                              <rect>
+                               <x>1000</x>
+                               <y>251</y>
+                               <width>41</width>
+                               <height>20</height>
+                              </rect>
+                             </property>
+                             <property name="text">
+                              <string>2.0</string>
+                             </property>
+                            </widget>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item>
+                        <spacer name="verticalSpacer_2">
+                         <property name="orientation">
+                          <enum>Qt::Vertical</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>20</width>
+                           <height>17</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                      </layout>
+                     </widget>
+                    </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButton_backToMainT21">
-                     <property name="text">
-                      <string>返回主界面</string>
+                    <widget class="GraphicsLayoutWidget" name="graphicsView_T21">
+                     <property name="enabled">
+                      <bool>true</bool>
+                     </property>
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>200</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>2000</width>
+                       <height>200</height>
+                      </size>
+                     </property>
+                     <property name="sizeIncrement">
+                      <size>
+                       <width>0</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="baseSize">
+                      <size>
+                       <width>0</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true"/>
                      </property>
                     </widget>
                    </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_8">
+                     <item>
+                      <spacer name="horizontalSpacer_16">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>618</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="pushButton_backToMainT21">
+                       <property name="text">
+                        <string>返回主界面</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
                   </layout>
-                 </item>
-                </layout>
-                <zorder>verticalSpacer_21</zorder>
-                <zorder></zorder>
-               </widget>
-               <widget class="QWidget" name="tab_2">
-                <attribute name="title">
-                 <string>波形图</string>
-                </attribute>
-                <layout class="QHBoxLayout" name="horizontalLayout_11">
-                 <item>
-                  <widget class="QFrame" name="frame">
-                   <property name="sizePolicy">
-                    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                    </sizepolicy>
-                   </property>
-                   <property name="frameShape">
-                    <enum>QFrame::StyledPanel</enum>
-                   </property>
-                   <property name="frameShadow">
-                    <enum>QFrame::Raised</enum>
-                   </property>
-                   <layout class="QVBoxLayout" name="verticalLayout_6">
-                    <item>
-                     <widget class="QWidget" name="widget" native="true">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="minimumSize">
-                       <size>
-                        <width>200</width>
-                        <height>100</height>
-                       </size>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QWidget" name="widget_2" native="true">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="minimumSize">
-                       <size>
-                        <width>200</width>
-                        <height>100</height>
-                       </size>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="Line" name="line_6">
-                   <property name="orientation">
-                    <enum>Qt::Vertical</enum>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QFrame" name="frame_2">
-                   <property name="sizePolicy">
-                    <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                    </sizepolicy>
-                   </property>
-                   <property name="frameShape">
-                    <enum>QFrame::StyledPanel</enum>
-                   </property>
-                   <property name="frameShadow">
-                    <enum>QFrame::Raised</enum>
-                   </property>
-                   <layout class="QVBoxLayout" name="verticalLayout_7">
-                    <item>
-                     <widget class="QLabel" name="label">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="text">
-                       <string>通道选择</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QComboBox" name="comboBox">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <spacer name="verticalSpacer">
-                      <property name="orientation">
-                       <enum>Qt::Vertical</enum>
-                      </property>
-                      <property name="sizeHint" stdset="0">
-                       <size>
-                        <width>17</width>
-                        <height>552</height>
-                       </size>
-                      </property>
-                     </spacer>
-                    </item>
-                    <item>
-                     <widget class="QPushButton" name="pushButton_backToMainT22">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="cursor">
-                       <cursorShape>ArrowCursor</cursorShape>
-                      </property>
-                      <property name="text">
-                       <string>返回主界面</string>
-                      </property>
-                      <property name="checkable">
-                       <bool>false</bool>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
                  </item>
                 </layout>
                </widget>
@@ -2835,13 +5743,13 @@
       </widget>
       <widget class="QWidget" name="tab3">
        <attribute name="title">
-        <string>机组诊断与维修</string>
+        <string>机组故障预警</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_16">
         <item>
-         <widget class="QTabWidget" name="tabWidget_5">
+         <widget class="QTabWidget" name="tabWidget_T31">
           <property name="currentIndex">
-           <number>1</number>
+           <number>0</number>
           </property>
           <widget class="QWidget" name="tab_6">
            <attribute name="title">
@@ -2850,24 +5758,14 @@
            <layout class="QVBoxLayout" name="verticalLayout_17">
             <item>
              <layout class="QGridLayout" name="gridLayout_4">
-              <item row="0" column="0">
-               <widget class="QLabel" name="label_9">
+              <item row="0" column="1">
+               <widget class="QFrame" name="frame_6">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                 <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
                 </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="pixmap">
-                 <pixmap>C:/Users/Charming/.designer/backup/pic/小风机.png</pixmap>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="1">
-               <widget class="QFrame" name="frame_6">
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -2911,7 +5809,7 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QComboBox" name="comboBox_3">
+                  <widget class="QComboBox" name="comboBox_unitT3">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                      <horstretch>0</horstretch>
@@ -2934,7 +5832,7 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QComboBox" name="comboBox_4">
+                  <widget class="QComboBox" name="comboBox_systemT3">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                      <horstretch>0</horstretch>
@@ -2957,7 +5855,7 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QComboBox" name="comboBox_5">
+                  <widget class="QComboBox" name="comboBox_channelT3">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                      <horstretch>0</horstretch>
@@ -2981,17 +5879,35 @@
                  </item>
                 </layout>
                 <zorder>label_8</zorder>
-                <zorder>comboBox_4</zorder>
+                <zorder>comboBox_systemT3</zorder>
                 <zorder>label_6</zorder>
-                <zorder>comboBox_5</zorder>
-                <zorder>comboBox_3</zorder>
+                <zorder>comboBox_channelT3</zorder>
+                <zorder>comboBox_unitT3</zorder>
                 <zorder>label_7</zorder>
                 <zorder>verticalSpacer_7</zorder>
                 <zorder>verticalSpacer_8</zorder>
                </widget>
               </item>
               <item row="1" column="0" colspan="2">
-               <widget class="QTabWidget" name="tabWidget_4">
+               <widget class="QTabWidget" name="tabWidget_T32">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>200</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>300</height>
+                 </size>
+                </property>
                 <property name="currentIndex">
                  <number>1</number>
                 </property>
@@ -3001,7 +5917,7 @@
                  </attribute>
                  <layout class="QHBoxLayout" name="horizontalLayout_12">
                   <item>
-                   <widget class="QWidget" name="widget_4" native="true"/>
+                   <widget class="GraphicsLayoutWidget" name="graphicsView_residualT31"/>
                   </item>
                  </layout>
                 </widget>
@@ -3011,7 +5927,104 @@
                  </attribute>
                  <layout class="QHBoxLayout" name="horizontalLayout_13">
                   <item>
-                   <widget class="QWidget" name="widget_5" native="true"/>
+                   <widget class="GraphicsLayoutWidget" name="graphicsView_trendT32"/>
+                  </item>
+                 </layout>
+                </widget>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QScrollArea" name="scrollArea_2">
+                <property name="widgetResizable">
+                 <bool>true</bool>
+                </property>
+                <widget class="QWidget" name="scrollAreaWidgetContents_3">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>1492</width>
+                   <height>502</height>
+                  </rect>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout_3">
+                  <item>
+                   <widget class="QFrame" name="frame_2">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>1470</width>
+                      <height>480</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>1470</width>
+                      <height>480</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">.QFrame{border-image:url(:/pic/机组结构示意图.png);
+background-color:rgb(0,112,192, 50)}
+.QPushButton{background-color:rgb(92, 206, 159,200);
+font-size: 20px;
+font-weight: bold;}
+</string>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <widget class="QPushButton" name="BtnWindPower_T3">
+                     <property name="geometry">
+                      <rect>
+                       <x>110</x>
+                       <y>420</y>
+                       <width>141</width>
+                       <height>41</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>风能捕捉系统</string>
+                     </property>
+                    </widget>
+                    <widget class="QPushButton" name="BtnWindPower_T3_2">
+                     <property name="geometry">
+                      <rect>
+                       <x>550</x>
+                       <y>420</y>
+                       <width>111</width>
+                       <height>41</height>
+                      </rect>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">.QPushButton{background-color:rgb(255, 20, 90)}</string>
+                     </property>
+                     <property name="text">
+                      <string>传动系统</string>
+                     </property>
+                    </widget>
+                    <widget class="QPushButton" name="BtnWindPower_T3_3">
+                     <property name="geometry">
+                      <rect>
+                       <x>1130</x>
+                       <y>420</y>
+                       <width>131</width>
+                       <height>41</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>发电机系统</string>
+                     </property>
+                    </widget>
+                   </widget>
                   </item>
                  </layout>
                 </widget>
@@ -3021,30 +6034,57 @@
             </item>
            </layout>
           </widget>
-          <widget class="QWidget" name="tab_7">
-           <attribute name="title">
-            <string>诊断结果与维修决策</string>
-           </attribute>
-           <layout class="QGridLayout" name="gridLayout_5">
-            <item row="4" column="0">
-             <widget class="QLineEdit" name="lineEdit">
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab5">
+       <attribute name="title">
+        <string>机组健康维护</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="4" column="0" colspan="3">
+         <widget class="QScrollArea" name="scrollArea_3">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>180</height>
+           </size>
+          </property>
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents_4">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>1371</width>
+             <height>295</height>
+            </rect>
+           </property>
+           <layout class="QFormLayout" name="formLayout_6">
+            <item row="0" column="0">
+             <widget class="QLineEdit" name="lineEdit_6">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
               </property>
-             </widget>
-            </item>
-            <item row="3" column="0">
-             <widget class="QLabel" name="label_14">
               <property name="text">
-               <string>征兆</string>
+               <string>有功功率 下降</string>
               </property>
              </widget>
             </item>
-            <item row="4" column="1">
-             <widget class="QPushButton" name="pushButton_8">
+            <item row="0" column="1">
+             <widget class="QPushButton" name="pushButton_pic1T4">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
                 <horstretch>0</horstretch>
@@ -3059,8 +6099,21 @@
               </property>
              </widget>
             </item>
-            <item row="6" column="1">
-             <widget class="QPushButton" name="pushButton_10">
+            <item row="1" column="0">
+             <widget class="QLineEdit" name="lineEdit_5">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>齿轮啮合效率 下降</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QPushButton" name="pushButton_19">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
                 <horstretch>0</horstretch>
@@ -3072,21 +6125,73 @@
               </property>
              </widget>
             </item>
-            <item row="2" column="0" colspan="3">
-             <widget class="Line" name="line">
-              <property name="lineWidth">
-               <number>2</number>
+            <item row="2" column="0">
+             <widget class="QLineEdit" name="lineEdit_4">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
               </property>
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
+              <property name="text">
+               <string>奇异谱熵 上升</string>
               </property>
              </widget>
             </item>
-            <item row="1" column="0" colspan="3">
-             <widget class="QTableView" name="tableView_diagnosis"/>
+            <item row="2" column="1">
+             <widget class="QPushButton" name="pushButton_20">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>图谱</string>
+              </property>
+             </widget>
             </item>
-            <item row="5" column="1">
-             <widget class="QPushButton" name="pushButton_9">
+            <item row="3" column="0">
+             <widget class="QLineEdit" name="lineEdit_7">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>功率谱熵 上升</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QPushButton" name="pushButton_21">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>图谱</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLineEdit" name="lineEdit_8">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>相似性因子 下降</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <widget class="QPushButton" name="pushButton_22">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
                 <horstretch>0</horstretch>
@@ -3099,17 +6204,30 @@
              </widget>
             </item>
             <item row="5" column="0">
-             <widget class="QLineEdit" name="lineEdit_2">
+             <widget class="QLineEdit" name="lineEdit_9">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="1">
+             <widget class="QPushButton" name="pushButton_23">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>图谱</string>
               </property>
              </widget>
             </item>
             <item row="6" column="0">
-             <widget class="QLineEdit" name="lineEdit_3">
+             <widget class="QLineEdit" name="lineEdit_10">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
                 <horstretch>0</horstretch>
@@ -3118,169 +6236,250 @@
               </property>
              </widget>
             </item>
-            <item row="0" column="2">
-             <layout class="QHBoxLayout" name="horizontalLayout_4">
-              <item>
-               <spacer name="horizontalSpacer_2">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>40</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-              <item>
-               <widget class="QLabel" name="label_12">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="text">
-                 <string>机组：</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QComboBox" name="comboBox_6">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLabel" name="label_13">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="text">
-                 <string>系统：</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QComboBox" name="comboBox_7">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <spacer name="horizontalSpacer_3">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-                <property name="sizeType">
-                 <enum>QSizePolicy::Maximum</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>40</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-              <item>
-               <widget class="QPushButton" name="pushButton_6">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="text">
-                 <string>查询</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QPushButton" name="pushButton_7">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="text">
-                 <string>维修报表</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
+            <item row="6" column="1">
+             <widget class="QPushButton" name="pushButton_24">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>图谱</string>
+              </property>
+             </widget>
             </item>
-            <item row="0" column="0" colspan="2">
-             <layout class="QHBoxLayout" name="horizontalLayout_3">
-              <item>
-               <widget class="QLabel" name="label_10">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="text">
-                 <string>从</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QDateTimeEdit" name="dateTimeEdit">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="calendarPopup">
-                 <bool>true</bool>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLabel" name="label_11">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="text">
-                 <string>至</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QDateTimeEdit" name="dateTimeEdit_2">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="calendarPopup">
-                 <bool>true</bool>
-                </property>
-               </widget>
-              </item>
-             </layout>
+            <item row="7" column="0">
+             <widget class="QLineEdit" name="lineEdit_11">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="1">
+             <widget class="QPushButton" name="pushButton_25">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>图谱</string>
+              </property>
+             </widget>
             </item>
            </layout>
+           <zorder>pushButton_pic1T4</zorder>
+           <zorder>lineEdit_4</zorder>
+           <zorder>lineEdit_6</zorder>
+           <zorder>lineEdit_5</zorder>
+           <zorder>pushButton_20</zorder>
+           <zorder>pushButton_19</zorder>
+           <zorder>pushButton_21</zorder>
+           <zorder>lineEdit_7</zorder>
+           <zorder>pushButton_22</zorder>
+           <zorder>lineEdit_8</zorder>
+           <zorder>pushButton_23</zorder>
+           <zorder>lineEdit_9</zorder>
+           <zorder>pushButton_24</zorder>
+           <zorder>lineEdit_10</zorder>
+           <zorder>pushButton_25</zorder>
+           <zorder>lineEdit_11</zorder>
           </widget>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="3">
+         <widget class="QTableView" name="tableView_diagnosis">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" colspan="3">
+         <widget class="Line" name="line_6">
+          <property name="lineWidth">
+           <number>2</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_16">
+          <item>
+           <spacer name="horizontalSpacer_22">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_26">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>机组：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_unitT4">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_31">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>系统：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_systemT4">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_23">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Maximum</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_16">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>查询</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_17">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>维修报表</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="0" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_17">
+          <item>
+           <widget class="QLabel" name="label_33">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>从</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QDateEdit" name="dateEdit_4">
+            <property name="dateTime">
+             <datetime>
+              <hour>0</hour>
+              <minute>0</minute>
+              <second>0</second>
+              <year>2018</year>
+              <month>12</month>
+              <day>20</day>
+             </datetime>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_34">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>至</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QDateEdit" name="dateEdit_5">
+            <property name="dateTime">
+             <datetime>
+              <hour>0</hour>
+              <minute>0</minute>
+              <second>0</second>
+              <year>2019</year>
+              <month>3</month>
+              <day>20</day>
+             </datetime>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>征兆</string>
+          </property>
          </widget>
         </item>
        </layout>
@@ -3340,7 +6539,7 @@
         <item row="0" column="4" rowspan="4">
          <widget class="QTabWidget" name="tabWidget_6">
           <property name="currentIndex">
-           <number>2</number>
+           <number>0</number>
           </property>
           <widget class="QWidget" name="tab_8">
            <attribute name="title">
@@ -3355,7 +6554,11 @@
              </widget>
             </item>
             <item row="1" column="0">
-             <widget class="QTableView" name="tableView_warningrule"/>
+             <widget class="QTableView" name="tableView_warningrule">
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+             </widget>
             </item>
             <item row="2" column="0">
              <widget class="Line" name="line_2">
@@ -3412,14 +6615,20 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1222</width>
+     <width>1444</width>
      <height>26</height>
     </rect>
    </property>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>GraphicsLayoutWidget</class>
+   <extends>QGraphicsView</extends>
+   <header>pyqtgraph</header>
+  </customwidget>
+ </customwidgets>
  <resources>
-  <include location="picSource.qrc"/>
   <include location="picSource.qrc"/>
  </resources>
  <connections/>

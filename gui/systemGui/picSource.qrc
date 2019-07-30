@@ -1,5 +1,11 @@
 <RCC>
   <qresource>
+    <file>pic/机组结构示意图.png</file>
+    <file>pic/按钮_登入.png</file>
+    <file>pic/按钮_知识库.png</file>
+    <file>pic/标题1.png</file>
+    <file>pic/系统测点图.png</file>
+    <file>pic/设备树.png</file>
     <file>pic/风力发电.png</file>
     <file>pic/小风机.png</file>
   </qresource>
